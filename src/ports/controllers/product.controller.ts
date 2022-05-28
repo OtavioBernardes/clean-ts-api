@@ -1,10 +1,15 @@
 import { HttpRequest, HttpResponse } from './ports'
+import { addProduct } from '../../use-cases/product/save'
 import { created } from './util'
 
-class ProductController {
+export class ProductController {
+
+    constructor(
+        private readonly addProduct: addProduct
+    ) { }
+
     async save(request: HttpRequest): Promise<HttpResponse> {
-        return created(request.body)
+        const res = await this.addProduct.handle(request.body)
+        return created(res)
     }
 }
-
-export default new ProductController()
