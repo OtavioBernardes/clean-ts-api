@@ -1,18 +1,15 @@
 import express from 'express';
+import router from './infrastructure/routes/product-routes';
 
 const app = express();
+
 app.use(express.json());
 
-interface RequestBody {
-  name: string;
-}
-
 app.post('/', (request, response) => {
-  const user = request.body as RequestBody;
-
   return response.send({
-    message: `Hello ${user.name}`,
+    message: `Hello World`,
   });
 });
 
+app.use('/api/', router)
 app.listen(3000, () => console.log('Listening 3000'));
