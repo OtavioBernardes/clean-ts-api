@@ -1,12 +1,12 @@
 import { HttpRequest, HttpResponse } from '../ports'
-import { FindOneByName } from '../../../use-cases/product/find-one-by-name-product';
+import { AddProduct } from '../../../use-cases/product/add-product';
 import { created } from '../util'
 
 export class AddProductController {
 
-  private usecase: FindOneByName;
+  private usecase: AddProduct;
 
-  constructor(usecase: FindOneByName) {
+  constructor(usecase: AddProduct) {
     this.usecase = usecase;
   }
 
