@@ -1,5 +1,5 @@
 import { HttpResponse } from '../ports'
-import { FindAll } from '../../../use-cases/product/find-all-product';
+import { FindAll } from '../../../use-cases/product/find-all';
 import { ok } from '../util'
 
 export class FindAllController {

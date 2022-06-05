@@ -1,5 +1,5 @@
 import { HttpRequest, HttpResponse } from '../ports'
-import { FindOneByName } from '../../../use-cases/product/find-one-by-name-product';
+import { FindOneByName } from '../../../use-cases/product/find-one-by-name';
 import { ok } from '../util'
 
 export class FindOneByNameController {

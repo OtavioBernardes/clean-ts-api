@@ -6,10 +6,10 @@ import { OkPacket, RowDataPacket } from "mysql2";
 export class MysqlProductRepository implements ProductRepository {
 
     save(product: ProductData): Promise<any> {
-        const queryString = `INSERT INTO product (name, price) VALUES ('${product.name}', ${product.price})`
-
+        
+        const query = `INSERT INTO product (name, price) VALUES ('${product.name}', ${product.price})`
         return new Promise((resolve, reject) => {
-            db.query(queryString,
+            db.query(query,
                 (err, result) => {
                     if (err) reject(err)
                     resolve(<OkPacket>result)
@@ -19,10 +19,10 @@ export class MysqlProductRepository implements ProductRepository {
     }
 
     async findOneByName(name: string): Promise<any> {
-        const queryString = `SELECT * FROM product WHERE name = '${name}'`
 
+        const query = `SELECT * FROM product WHERE name = '${name}'`
         return new Promise((resolve, reject) => {
-            db.query(queryString,
+            db.query(query,
                 (err, result) => {
                     if (err) reject(err)
                     resolve(<OkPacket>result)
@@ -33,10 +33,9 @@ export class MysqlProductRepository implements ProductRepository {
 
     async findAll(): Promise<any[]> {
 
-        const queryString = `SELECT * FROM product`
-
+        const query = `SELECT * FROM product`
         return new Promise((resolve, reject) => {
-            db.query(queryString,
+            db.query(query,
                 (err, result) => {
                     if (err) reject(err)
                     resolve(<OkPacket[]>result)

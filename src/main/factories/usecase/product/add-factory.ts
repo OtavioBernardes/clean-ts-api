@@ -1,5 +1,5 @@
-import { AddProduct } from '../../../use-cases/product/add-product'
-import { MysqlProductRepository } from '../../../external/mysql';
+import { AddProduct } from '../../../../use-cases/product/add'
+import { MysqlProductRepository } from '../../../../external/mysql';
 
 export const makeDbAddProduct = (): AddProduct => {
   const inMemoryProductRepository = new MysqlProductRepository();
