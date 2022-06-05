@@ -1,3 +1,4 @@
 export interface HttpRequest {
-    body: any
+    body: any,
+    params: any
 }

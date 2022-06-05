@@ -11,6 +11,6 @@ export class AddProduct implements UseCase {
     }
     
     async perform(product: ProductData): Promise<ProductData> {
-        return this.repo.save(product)
+      return this.repo.save(product)
     }
 }

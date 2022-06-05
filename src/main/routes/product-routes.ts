@@ -6,6 +6,6 @@ import { makeFindOneByNameController } from '../factories/controllers/find-one-b
 const router = Router()
 
 router.post('/product', adaptRoute(makeAddProductController()))
-router.get('/product', adaptRoute(makeFindOneByNameController()))
+router.get('/product/:name', adaptRoute(makeFindOneByNameController()))
 
 export default router

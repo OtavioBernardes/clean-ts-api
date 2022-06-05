@@ -1,6 +1,6 @@
 import { HttpRequest, HttpResponse } from '../ports'
 import { FindOneByName } from '../../../use-cases/product/find-one-by-name-product';
-import { created } from '../util'
+import { ok } from '../util'
 
 export class FindOneByNameController {
 
@@ -11,7 +11,7 @@ export class FindOneByNameController {
   }
 
   async handle(request: HttpRequest): Promise<HttpResponse> {
-    const res = await this.usecase.perform(request.body)
-    return created(res)
+    const res = await this.usecase.perform(request.params.name)
+    return ok(res)
   }
 }
