@@ -1,7 +1,6 @@
-import { ProductData } from '../../../domain/product'
+import { ProductData } from '../../../domain'
 
 export interface ProductRepository {
-    find(): Promise<ProductData[]>
-    findOne(id: number): Promise<ProductData>
-    save(product: ProductData): Promise<void>
+    findOneByName(name: string): Promise<ProductData>
+    save(product: ProductData): Promise<any>
 }

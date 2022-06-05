@@ -2,7 +2,7 @@ import { ProductData } from "../../domain";
 import { ProductRepository } from "./ports/product-repository";
 import { UseCase } from "../ports/use-case";
 
-export class AddProduct implements UseCase {
+export class FindOneByName implements UseCase {
 
     private repo: ProductRepository;
 
@@ -10,7 +10,7 @@ export class AddProduct implements UseCase {
       this.repo = repo;
     }
     
-    async perform(product: ProductData): Promise<ProductData> {
-        return this.repo.save(product)
+    async perform(name: string): Promise<ProductData> {
+        return this.repo.findOneByName(name)
     }
 }
