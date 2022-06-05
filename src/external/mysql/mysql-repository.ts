@@ -19,13 +19,27 @@ export class MysqlProductRepository implements ProductRepository {
     }
 
     async findOneByName(name: string): Promise<any> {
-        const queryString = `SELECT * FROM product where name = '${name}'`
+        const queryString = `SELECT * FROM product WHERE name = '${name}'`
 
         return new Promise((resolve, reject) => {
             db.query(queryString,
                 (err, result) => {
                     if (err) reject(err)
                     resolve(<OkPacket>result)
+                }
+            );
+        });
+    }
+
+    async findAll(): Promise<any[]> {
+
+        const queryString = `SELECT * FROM product`
+
+        return new Promise((resolve, reject) => {
+            db.query(queryString,
+                (err, result) => {
+                    if (err) reject(err)
+                    resolve(<OkPacket[]>result)
                 }
             );
         });
