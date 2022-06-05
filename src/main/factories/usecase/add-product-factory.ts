@@ -1,5 +1,6 @@
 import { AddProduct } from '../../../use-cases/product/add-product'
 import { InMemoryProductRepository } from '../../../use-cases/product/repository/in-memory-product-repository';
+import { ProductData } from '../../../domain';
 
 export const makeDbAddProduct = (): AddProduct => {
   const inMemoryProductRepository = new InMemoryProductRepository();

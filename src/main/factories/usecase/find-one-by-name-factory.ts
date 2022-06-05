@@ -1,3 +1,4 @@
+import { ProductData } from '../../../domain';
 import { FindOneByName } from '../../../use-cases/product/find-one-by-name-product';
 import { InMemoryProductRepository } from '../../../use-cases/product/repository/in-memory-product-repository';
 
