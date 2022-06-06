@@ -1,5 +1,5 @@
-import { ProductData } from '../../domain'
-import { ProductRepository } from '../../use-cases/product/ports/product-repository'
+import { ProductData } from '../../../domain'
+import { ProductRepository } from '../../../use-cases/product/ports/product-repository'
 import { db } from './helper'
 import { OkPacket } from "mysql2";
 

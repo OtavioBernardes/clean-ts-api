@@ -1,5 +1,5 @@
-import { FindAll } from '../../../../use-cases/product/find-all';
-import { MysqlProductRepository } from '../../../../external/mysql';
+import { FindAll } from '../../../../use-cases/product';
+import { MysqlProductRepository } from '../../../../external/repositories/mysql';
 
 export const makeDbFindAllProduct = (): FindAll => {
   const inMemoryProductRepository = new MysqlProductRepository();

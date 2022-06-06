@@ -1,5 +1,5 @@
 import { HttpRequest, HttpResponse } from '../ports'
-import { AddProduct } from '../../../use-cases/product/add';
+import { AddProduct } from '../../../use-cases/product';
 import { created } from '../util'
 
 export class AddProductController {

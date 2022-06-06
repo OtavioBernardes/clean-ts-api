@@ -1,5 +1,5 @@
-import { FindOneByName } from '../../../../use-cases/product/find-one-by-name';
-import { MysqlProductRepository } from '../../../../external/mysql';
+import { FindOneByName } from '../../../../use-cases/product';
+import { MysqlProductRepository } from '../../../../external/repositories/mysql';
 
 export const makeDbFindOneByNameProduct = (): FindOneByName => {
   const inMemoryProductRepository = new MysqlProductRepository();
