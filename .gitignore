@@ -8,3 +8,5 @@ tmp
 # Environment variables, never commit this file
 .env
 
+# Desenho draw.io
+architecture

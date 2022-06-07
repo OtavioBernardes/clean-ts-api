@@ -10,7 +10,7 @@
 
 # Project Overview:
 <p align="center" >
-  <img src="architecture.png" alt="project-overview"  style="align: center"/>
+  <img src="public/img/architecture.png" alt="project-overview"  style="align: center"/>
 </p>
 
 ---
