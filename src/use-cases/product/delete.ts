@@ -10,7 +10,7 @@ export class DeleteProduct implements UseCase {
       this.repo = repo;
     }
     
-    async perform(id: number): Promise<ProductData> {
+    async perform(id: number): Promise<any> {
       return this.repo.delete(id)
     }
 }

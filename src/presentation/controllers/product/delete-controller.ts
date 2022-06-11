@@ -1,6 +1,6 @@
 import { HttpRequest, HttpResponse } from '../ports'
 import { DeleteProduct } from '../../../use-cases/product'
-import { created } from '../util'
+import { created, notFoundRequest } from '../util'
 
 export class DeleteProductController {
 
@@ -12,6 +12,10 @@ export class DeleteProductController {
 
   async handle(request: HttpRequest): Promise<HttpResponse> {
     const res = await this.usecase.perform(request.params.id)
+
+    if (res.affectedRows === 0)
+      return notFoundRequest({ message: 'Not found!' })
+
     return created(res)
   }
 }

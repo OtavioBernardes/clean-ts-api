@@ -44,8 +44,7 @@ export class MysqlProductRepository implements ProductRepository {
         });
     }
 
-    async delete(id: number): Promise<any[]> {
-
+    async delete(id: number): Promise<any> {
         const query = `DELETE FROM product where id = '${id}' `
         return new Promise((resolve, reject) => {
             db.query(query,
