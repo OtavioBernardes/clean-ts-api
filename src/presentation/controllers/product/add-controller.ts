@@ -27,6 +27,6 @@ export class AddProductController {
 
   async validateRequest(request: HttpRequest): Promise<boolean> {
     const { name, price } = request.body;
-    return !!name && !!price && typeof price === 'number'
+    return !!name && !!price
   }
 }
