@@ -11,3 +11,4 @@
 
 1. ✅ Retorna erro **400** se name ou price não forem fornecidas.
 2. ✅ Retorna erro **409** se já houver o registro do produto no banco.
+3. ✅ Retorna erro **400** se o price for negativo.
