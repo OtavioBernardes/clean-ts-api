@@ -1,3 +1,5 @@
+import { InvalidPriceError } from "./errors"
+
 export class Price {
     public readonly value: number
 
@@ -5,9 +7,10 @@ export class Price {
         this.value = price
     }
 
-    public static create(price: number): any {
+    public static create(price: number): InvalidPriceError | Price {
         if (this.validate(price))
             return new Price(price)
+        return new InvalidPriceError(price)
     }
 
     static validate(price: number) {
