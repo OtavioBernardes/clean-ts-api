@@ -10,7 +10,7 @@ export class FindOneByName implements UseCase {
       this.repo = repo;
     }
     
-    async perform(name: string): Promise<ProductData> {
+    async perform(name: string): Promise<any> {
         return this.repo.findOneByName(name)
     }
 }
