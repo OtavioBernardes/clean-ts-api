@@ -1,7 +1,7 @@
-import { ProductData } from '../../../domain'
-import { ProductRepository } from '../../../use-cases/product/ports/product-repository'
 import { db } from './helper'
 import { OkPacket } from "mysql2";
+import { ProductData } from '../../../domain'
+import { ProductRepository } from '../../../use-cases/product/ports/product-repository'
 
 export class MysqlProductRepository implements ProductRepository {
 
@@ -10,9 +10,9 @@ export class MysqlProductRepository implements ProductRepository {
         const query = `INSERT INTO product (name, price) VALUES ('${product.name}', ${product.price})`
         return new Promise((resolve, reject) => {
             db.query(query,
-                (err, result) => {
+                (err, ) => {
                     if (err) reject(err)
-                    resolve(<OkPacket>result)
+                    resolve(product)
                 }
             );
         });

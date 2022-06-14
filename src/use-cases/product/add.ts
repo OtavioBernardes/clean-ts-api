@@ -1,6 +1,8 @@
-import { ProductData } from "../../domain";
+import { ProductData, Product } from "../../domain";
+import { InvalidPriceError } from "../../domain/errors";
 import { ProductRepository } from "./ports/product-repository";
 import { UseCase } from "../ports/use-case";
+import { Either, left } from '../../shared'
 
 export class AddProduct implements UseCase {
 
@@ -11,11 +13,17 @@ export class AddProduct implements UseCase {
   }
 
   async perform(product: ProductData): Promise<any> {
+    const newProductOrError: Either<InvalidPriceError, Product> = Product.create(product)
+
+    if (newProductOrError.isLeft())
+      return left(newProductOrError.value)
+
     const existsProduct = await this.repo.findOneByName(product.name)
 
     if (existsProduct.length !== 0)
-      return false
+      return left('This product already exists in the database!')
 
-    return this.repo.save(product)
+    const newProduct: Product = newProductOrError.value
+    return this.repo.save({ name: newProduct.name, price: newProduct.price.value })
   }
 }

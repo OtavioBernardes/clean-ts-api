@@ -1,5 +1,6 @@
 import { HttpRequest } from '../ports'
 import { AddProduct } from '../../../use-cases/product';
+import { Either, left, Right } from '../../../shared'
 import { created, badRequest, conflitRequest, serverError } from '../util'
 
 export class AddProductController {
@@ -16,8 +17,9 @@ export class AddProductController {
         return badRequest({ message: 'This route requires: name and price!' })
 
       const res = await this.usecase.perform(request.body)
-      if (!res)
-        return conflitRequest({ message: 'This product already exists in the database!' })
+      
+      if (res.isLeft())
+        return conflitRequest({ message: res.value })
 
       return created(res)
     } catch (error) {

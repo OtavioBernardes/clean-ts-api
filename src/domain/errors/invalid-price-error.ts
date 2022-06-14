@@ -1,5 +1,5 @@
 export class InvalidPriceError extends Error {
-    public readonly name = 'InvalidPriceError'
+    public readonly value = 'InvalidPriceError'
     constructor (price: number) {
       super('Invalid price: ' + price + '.')
     }

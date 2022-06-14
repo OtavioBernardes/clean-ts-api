@@ -1,3 +1,4 @@
+import { Either, left, right } from '../shared'
 import { InvalidPriceError } from "./errors"
 
 export class Price {
@@ -7,10 +8,10 @@ export class Price {
         this.value = price
     }
 
-    public static create(price: number): InvalidPriceError | Price {
+    public static create(price: number): Either<InvalidPriceError, Price> {
         if (this.validate(price))
-            return new Price(price)
-        return new InvalidPriceError(price)
+            return right(new Price(price))
+        return left(new InvalidPriceError(price))
     }
 
     static validate(price: number) {
