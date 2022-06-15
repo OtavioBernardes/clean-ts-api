@@ -9,10 +9,11 @@
 </p>
 
 # Project Overview:
-<p align="center" >
-  <img media="(prefers-color-scheme: dark)" src="public/img/architecture-dark.png" alt="project-overview"  style="align: center"/>
-    <img media="(prefers-color-scheme: light)" src="public/img/architecture-light.png" alt="project-overview"  style="align: center"/>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/OtavioBernardes/product-clean-architecture-api/master/public/img/architecture-dark.png"  style="align: center"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/OtavioBernardes/product-clean-architecture-api/master/public/img/architecture-light.png"  style="align: center"/>
+  <img>
+</picture>
 
 ---
 
