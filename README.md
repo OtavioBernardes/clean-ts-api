@@ -9,12 +9,13 @@
 </p>
 
 # Project Overview:
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/OtavioBernardes/product-clean-architecture-api/master/public/img/architecture-dark.png"  style="align: center"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/OtavioBernardes/product-clean-architecture-api/master/public/img/architecture-light.png"  style="align: center"/>
-  <img>
-</picture>
-
+<p align="center">
+   <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/OtavioBernardes/product-clean-architecture-api/master/public/img/architecture-dark.png"  />
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/OtavioBernardes/product-clean-architecture-api/master/public/img/architecture-light.png" />
+      <img>
+   </picture>
+</p>
 ---
 
 </br> 
@@ -45,3 +46,9 @@ Way To Build Serverless Apps;</br>
 3. Install all dependencies `npm install`
 4. Run `npm run dev`
 5. The server runs on: http://localhost:3333
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**>
