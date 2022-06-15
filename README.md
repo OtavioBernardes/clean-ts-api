@@ -51,4 +51,4 @@ Way To Build Serverless Apps;</br>
 
 MIT
 
-**Free Software, Hell Yeah!**>
+**Free Software, Hell Yeah!**
