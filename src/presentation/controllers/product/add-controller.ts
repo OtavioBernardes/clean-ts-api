@@ -17,11 +17,11 @@ export class AddProductController {
         return badRequest({ message: 'This route requires: name and price!' })
 
       const res = await this.usecase.perform(request.body)
-      
+
       if (res.isLeft())
         return conflitRequest({ message: res.value })
 
-      return created(res)
+      return created(res.value)
     } catch (error) {
       return serverError(error)
     }
