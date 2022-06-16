@@ -6,6 +6,6 @@ const app = express();
 dotenv.config();
 
 app.use(express.json());
-app.use('/api/', router)
+app.use(router)
 
 app.listen(3000, () => console.log('Listening 3000'));
