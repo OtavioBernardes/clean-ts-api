@@ -18,7 +18,7 @@ export class AddProduct implements UseCase {
     if (newProductOrError.isLeft())
       return left(newProductOrError.value)
 
-    const existsProduct = await this.repo.findOneByName(product.name)
+    const existsProduct = await this.repo.exists(product.name)
 
     if (existsProduct.length !== 0)
       return left('This product already exists in the database!')

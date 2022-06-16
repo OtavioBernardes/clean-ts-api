@@ -1,12 +1,12 @@
 import { HttpRequest, HttpResponse } from '../ports'
-import { FindOneByName } from '../../../use-cases/product';
+import { FindOne } from '../../../use-cases/product';
 import { notFoundRequest, ok } from '../util'
 
-export class FindOneByNameController {
+export class FindOneController {
 
-  private usecase: FindOneByName;
+  private usecase: FindOne;
 
-  constructor(usecase: FindOneByName) {
+  constructor(usecase: FindOne) {
     this.usecase = usecase;
   }
 

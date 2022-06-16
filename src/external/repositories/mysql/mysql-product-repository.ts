@@ -18,9 +18,9 @@ export class MysqlProductRepository implements ProductRepository {
         });
     }
 
-    async findOneByName(name: string): Promise<any> {
+    async findOne(id: number): Promise<any> {
 
-        const query = `SELECT * FROM product WHERE name = '${name}'`
+        const query = `SELECT * FROM product WHERE id = '${id}'`
         return new Promise((resolve, reject) => {
             db.query(query,
                 (err, result) => {
@@ -51,6 +51,19 @@ export class MysqlProductRepository implements ProductRepository {
                 (err, result) => {
                     if (err) reject(err)
                     resolve(<OkPacket[]>result)
+                }
+            );
+        });
+    }
+
+    async exists(name: string): Promise<any> {
+
+        const query = `SELECT * FROM product WHERE name = '${name}'`
+        return new Promise((resolve, reject) => {
+            db.query(query,
+                (err, result) => {
+                    if (err) reject(err)
+                    resolve(<OkPacket>result)
                 }
             );
         });

@@ -1,8 +1,7 @@
-import { ProductData } from "../../domain";
 import { ProductRepository } from "./ports/product-repository";
 import { UseCase } from "../ports/use-case";
 
-export class FindOneByName implements UseCase {
+export class FindOne implements UseCase {
 
     private repo: ProductRepository;
 
@@ -10,7 +9,7 @@ export class FindOneByName implements UseCase {
       this.repo = repo;
     }
     
-    async perform(name: string): Promise<any> {
-        return this.repo.findOneByName(name)
+    async perform(id: number): Promise<any> {
+        return this.repo.findOne(id)
     }
 }
