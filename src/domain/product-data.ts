@@ -1,4 +1,4 @@
 export interface ProductData {
-  name: string,
-  price: number
+	name: string,
+	price: number
 }

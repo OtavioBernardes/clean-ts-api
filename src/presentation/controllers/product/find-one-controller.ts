@@ -4,17 +4,17 @@ import { notFoundRequest, ok } from '../util'
 
 export class FindOneController {
 
-  private usecase: FindOne;
+	private usecase: FindOne;
 
-  constructor(usecase: FindOne) {
-    this.usecase = usecase;
-  }
+	constructor(usecase: FindOne) {
+		this.usecase = usecase;
+	}
 
-  async handle(request: HttpRequest): Promise<HttpResponse> {
-    const res = await this.usecase.perform(request.params.name)
-    if (res.length === 0)
-      return notFoundRequest({ message: 'Not found!' })
-      
-    return ok(res)
-  }
+	async handle(request: HttpRequest): Promise<HttpResponse> {
+		const res = await this.usecase.perform(request.params.name)
+		if (res.length === 0)
+			return notFoundRequest({ message: 'Not found!' })
+
+		return ok(res)
+	}
 }

@@ -4,13 +4,13 @@ import { UseCase } from "../ports/use-case";
 
 export class FindAll implements UseCase {
 
-    private repo: ProductRepository;
+	private repo: ProductRepository;
 
-    constructor(repo: ProductRepository) {
-      this.repo = repo;
-    }
-    
-    async perform(): Promise<ProductData[]> {
-        return this.repo.findAll()
-    }
+	constructor(repo: ProductRepository) {
+		this.repo = repo;
+	}
+
+	async perform(): Promise<ProductData[]> {
+		return this.repo.findAll()
+	}
 }

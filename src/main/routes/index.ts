@@ -6,9 +6,9 @@ import swaggerDocs from '../../external/swagger/swagger'
 const router = Router()
 
 router.post('/', (request, response) => {
-    return response.send({
-        message: `Hello World`,
-    });
+	return response.send({
+		message: `Hello World`,
+	});
 });
 
 router.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))

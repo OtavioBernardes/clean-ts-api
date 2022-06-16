@@ -4,14 +4,14 @@ import { ok } from '../util'
 
 export class FindAllController {
 
-  private usecase: FindAll;
+	private usecase: FindAll;
 
-  constructor(usecase: FindAll) {
-    this.usecase = usecase;
-  }
+	constructor(usecase: FindAll) {
+		this.usecase = usecase;
+	}
 
-  async handle(): Promise<HttpResponse> {
-    const res = await this.usecase.perform()
-    return ok(res)
-  }
+	async handle(): Promise<HttpResponse> {
+		const res = await this.usecase.perform()
+		return ok(res)
+	}
 }
