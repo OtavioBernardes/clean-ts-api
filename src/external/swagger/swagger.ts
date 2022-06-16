@@ -1,4 +1,4 @@
-import { addProduct, schemaProduct } from './product'
+import { addProduct, findAllProduct, schemaProduct, findOne, deleteProduct } from './product'
 
 export default
   {
@@ -13,6 +13,9 @@ export default
     "schemes": ["http"],
     "consumes": ["application/json"],
     "produces": ["application/json"],
-    "paths": { ...addProduct },
+    "paths": {
+      "/api/product/{id}": { ...findOne, ...deleteProduct },
+      "/api/product": { ...findAllProduct, ...addProduct },
+    },
     "definitions": { ...schemaProduct }
   }
