@@ -1,4 +1,4 @@
-import { Controller } from '../../../../presentation/ports/controller'
+import { Controller } from '../../../../presentation/ports'
 import { makeDbDeleteProduct } from '../../usecase/product/delete-factory'
 import { DeleteProductController } from '../../../../presentation/controllers/product'
 

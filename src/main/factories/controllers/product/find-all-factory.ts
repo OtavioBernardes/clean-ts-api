@@ -1,4 +1,4 @@
-import { Controller } from '../../../../presentation/ports/controller'
+import { Controller } from '../../../../presentation/ports'
 import { makeDbFindAllProduct } from '../../usecase/product/find-all-factory';
 import { FindAllController } from '../../../../presentation/controllers/product';
 

@@ -1,6 +1,6 @@
-import { HttpRequest, HttpResponse } from '../ports'
+import { HttpRequest, HttpResponse } from '../../ports'
 import { DeleteProduct } from '../../../use-cases/product'
-import { created, notFoundRequest } from '../util'
+import { created, notFoundRequest } from '../../helpers'
 
 export class DeleteProductController {
 

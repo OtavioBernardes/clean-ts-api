@@ -1,6 +1,6 @@
-import { HttpRequest, HttpResponse } from '../ports'
+import { HttpRequest, HttpResponse } from '../../ports'
 import { FindOne } from '../../../use-cases/product';
-import { notFoundRequest, ok } from '../util'
+import { notFoundRequest, ok } from '../../helpers'
 
 export class FindOneController {
 

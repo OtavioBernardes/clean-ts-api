@@ -1,6 +1,6 @@
-import { HttpResponse } from '../ports'
+import { HttpResponse } from '../../ports'
 import { FindAll } from '../../../use-cases/product';
-import { ok } from '../util'
+import { ok } from '../../helpers'
 
 export class FindAllController {
 

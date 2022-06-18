@@ -1,6 +1,6 @@
-import { HttpRequest } from '../ports'
+import { HttpRequest } from '../../ports'
 import { AddProduct } from '../../../use-cases/product';
-import { created, badRequest, conflitRequest, serverError } from '../util'
+import { created, badRequest, conflitRequest, serverError } from '../../helpers'
 
 export class AddProductController {
 
