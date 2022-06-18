@@ -24,6 +24,7 @@ export class AddProduct implements UseCase {
 			return left('This product already exists in the database!')
 
 		const newProduct: Product = newProductOrError.value
-		return right(await this.repo.save({ name: newProduct.name, price: newProduct.price.value }))
+		await this.repo.save({ name: newProduct.name, price: newProduct.price.value })
+		return right(product)
 	}
 }
