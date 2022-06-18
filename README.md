@@ -33,6 +33,7 @@ I developed this app to apply the new things that I learned, like microservices 
 🌐 <strong>Express</strong> —> Web framework for Node.js</br>
 ⚙️ <strong>Serverless Framework</strong> —> The Easy & Open Way To Build Serverless Apps;</br>
 📚 <strong>Mysql</strong> —> Database</br>
+⚙️ <strong>Swagger</strong> —> Documentation</br>
 
 
 ## :rocket: Getting Started
