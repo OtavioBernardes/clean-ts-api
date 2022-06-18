@@ -6,6 +6,7 @@
   <a href="#question-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#gear-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#clipboard-swagger-documentation">Swagger documentation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#page_facing_up-license">License</a>&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -42,6 +43,9 @@ I developed this app to apply the new things that I learned, like microservices 
 4. Run `npm run dev`
 5. The server runs on: http://localhost:3333
 
+## :clipboard: Swagger Documentation
+1. With the server running, access the url http://localhost:3333/api-docs
+<img src="./public/img/swagger-01.png">
 
 ## :page_facing_up: License
 
