@@ -1,8 +1,10 @@
 import { DeleteProduct } from '../../../../use-cases/product'
-import { MysqlProductRepository } from '../../../../external/repositories/mysql';
+import { MysqlAdapter } from '../../../../external/repositories/adapters';
+import { ProductRepositoryDatabase } from '../../../../external/repositories';
 
 export const makeDbDeleteProduct = (): DeleteProduct => {
-	const inMemoryProductRepository = new MysqlProductRepository();
-	const usecase = new DeleteProduct(inMemoryProductRepository)
+	const connection = new MysqlAdapter()
+	const inDatabaseProductRepository = new ProductRepositoryDatabase(connection);
+	const usecase = new DeleteProduct(inDatabaseProductRepository)
 	return usecase;
 }

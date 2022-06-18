@@ -1,8 +1,10 @@
 import { FindAll } from '../../../../use-cases/product';
-import { MysqlProductRepository } from '../../../../external/repositories/mysql';
+import { MysqlAdapter } from '../../../../external/repositories/adapters';
+import { ProductRepositoryDatabase } from '../../../../external/repositories';
 
 export const makeDbFindAllProduct = (): FindAll => {
-	const inMemoryProductRepository = new MysqlProductRepository();
-	const usecase = new FindAll(inMemoryProductRepository)
+	const connection = new MysqlAdapter()
+	const inDatabaseProductRepository = new ProductRepositoryDatabase(connection);
+	const usecase = new FindAll(inDatabaseProductRepository)
 	return usecase;
 }
