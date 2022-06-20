@@ -23,7 +23,7 @@
 ## :question: About
 
 Product-Api is a back-end application made with NodeJS.</br> 
-I developed this app to apply the new things that I learned, like typescript and clean architecture.
+I developed this app to apply the new things that I learned, like typescript and clean architecture. (This is my first project using clean architecture)
 
 ## :gear: Technologies
 
