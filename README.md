@@ -3,6 +3,13 @@
 </h1>
 
 <p align="center">
+  <img alt="Last commit on GitHub" src="https://img.shields.io/github/last-commit/OtavioBernardes/product-clean-architecture-api?color=7D40E7">
+  <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-OtavioBernardes-%20?color=7D40E7">
+  <img alt="Project top programing language" src="https://img.shields.io/github/languages/top/OtavioBernardes/product-clean-architecture-api?color=7D40E7">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/OtavioBernardes/product-clean-architecture-api?color=7D40E7">
+</p>
+
+<p align="center">
   <a href="#question-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#gear-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
